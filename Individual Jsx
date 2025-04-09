@@ -1,0 +1,22 @@
+import React from 'react';
+
+function Post({ post }) {
+  return (
+    <div className="post">
+      <div className="post__header">
+        <img src={post.userProfilePic} alt="User" />
+        <h3>{post.userName}</h3>
+      </div>
+      <div className="post__content">
+        <img src={post.imageUrl} alt="Post" />
+      </div>
+      <div className="post__actions">
+        <button>Like</button>
+        <button>Comment</button>
+        <button>Share</button>
+      </div>
+    </div>
+  );
+}
+
+export default Post;
