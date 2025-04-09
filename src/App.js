@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Header from './components/Header';
-import Sidebar from './components/Sidebar';
 import Feed from './components/Feed';
+import Sidebar from './components/Sidebar';
 import Stories from './components/Stories';
 import './styles/App.css';
 
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <div className="app__content">
         <Sidebar />
-        <div className="app__main">
+        <div className="app__feed">
           <Stories />
           <Feed />
         </div>
