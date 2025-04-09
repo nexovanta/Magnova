@@ -1,0 +1,34 @@
+// PHASE 3: REELS SYSTEM (SHORT VIDEOS) // ======================= // Tech Stack: React (frontend), Node.js + Express (backend), MongoDB (database), Cloudinary (file uploads)
+
+// === FRONTEND ===
+
+// File: src/pages/ReelsFeed.js // - Displays a list of vertical reels, one at a time
+
+// File: src/pages/CreateReel.js // - Upload and create a new reel (video + caption + hashtags)
+
+// File: src/components/ReelCard.js // - Reusable card component for displaying each reel in the feed // - Includes video player, like, comment, and share options
+
+// File: src/components/ReelCommentSection.js // - Displays comments for a reel
+
+// File: src/api/reels.js // - API calls for creating, fetching, liking, and commenting on reels
+
+// === BACKEND ===
+
+// File: routes/reels.js // - POST /api/reels — Create a new reel // - GET /api/reels/feed/:userId — Get a user's reel feed // - GET /api/reels/trending — Get trending reels // - POST /api/reels/like/:reelId — Like/unlike a reel // - POST /api/reels/comment/:reelId — Add comment on a reel // - POST /api/reels/save/:reelId — Save a reel // - POST /api/reels/report/:reelId — Report inappropriate reel
+
+// File: models/Reel.js // - Schema for a reel (video, title, hashtags, likes, comments, etc.)
+
+// File: models/ReelComment.js // - Schema for comments on reels (userId, text, timestamp)
+
+// File: models/ReelLike.js // - Schema for likes on reels (userId, reelId)
+
+// === CLOUDINARY === // Already configured in Phase 1 (utils/cloudinary.js)
+
+// === FILE STRUCTURE ===
+
+// ├── client/ // │   ├── src/ // │   │   ├── pages/ // │   │   │   ├── ReelsFeed.js // │   │   │   └── CreateReel.js // │   │   ├── components/ // │   │   │   ├── ReelCard.js // │   │   │   └── ReelCommentSection.js // │   │   ├── api/ // │   │   │   └── reels.js
+
+// ├── server/ // │   ├── routes/ // │   │   ├── reels.js // │   ├── models/ // │   │   ├── Reel.js // │   │   ├── ReelComment.js // │   │   └── ReelLike.js
+
+// === NEXT === // Full code will be generated file-by-file, starting with frontend components for creating and displaying reels.
+
