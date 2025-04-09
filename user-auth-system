@@ -1,0 +1,36 @@
+// PHASE 1: USER SYSTEM // ======================= // Tech Stack: React (frontend), Node.js + Express (backend), MongoDB (database), Cloudinary (file uploads), JWT (auth)
+
+// === FRONTEND (React) ===
+
+// File: src/App.js import React from 'react'; import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; import Login from './pages/Login'; import Register from './pages/Register'; import Profile from './pages/Profile'; import './App.css';
+
+function App() { return ( <Router> <Routes> <Route path="/" element={<Login />} /> <Route path="/register" element={<Register />} /> <Route path="/profile/:id" element={<Profile />} /> </Routes> </Router> ); }
+
+export default App;
+
+// File: src/pages/Register.js // File: src/pages/Login.js // File: src/pages/Profile.js // File: src/components/Navbar.js // File: src/api/auth.js // File: src/styles/App.css
+
+// === BACKEND (Node.js + Express) ===
+
+// File: server.js const express = require('express'); const mongoose = require('mongoose'); const dotenv = require('dotenv'); const cors = require('cors'); const authRoutes = require('./routes/auth'); const userRoutes = require('./routes/users');
+
+dotenv.config(); const app = express(); app.use(cors()); app.use(express.json());
+
+mongoose.connect(process.env.MONGO_URI, () => console.log('MongoDB connected'));
+
+app.use('/api/auth', authRoutes); app.use('/api/users', userRoutes);
+
+const PORT = process.env.PORT || 5000; app.listen(PORT, () => console.log(Server running on port ${PORT}));
+
+// File: routes/auth.js // File: routes/users.js // File: models/User.js // File: middleware/verifyToken.js
+
+// === CLOUDINARY CONFIG ===
+
+// File: utils/cloudinary.js const cloudinary = require('cloudinary').v2; cloudinary.config({ cloud_name: process.env.CLOUD_NAME, api_key: process.env.CLOUD_API_KEY, api_secret: process.env.CLOUD_API_SECRET, });
+
+module.exports = cloudinary;
+
+// === .env EXAMPLE === // PORT=5000 // MONGO_URI=mongodb+srv://your_mongo_string // JWT_SECRET=your_jwt_secret // CLOUD_NAME=your_cloudinary_name // CLOUD_API_KEY=your_cloudinary_key // CLOUD_API_SECRET=your_cloudinary_secret
+
+// This completes the setup for Phase 1: User System // Next phase: Feed + Posts
+
