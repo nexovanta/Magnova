@@ -1,0 +1,23 @@
+import React, { useState, useEffect } from 'react';
+import Post from './Post';  // A component for each post
+
+function Feed() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    // Fetch posts from backend API
+    fetch('/api/posts')
+      .then((response) => response.json())
+      .then((data) => setPosts(data));
+  }, []);
+
+  return (
+    <div className="feed">
+      {posts.map((post) => (
+        <Post key={post.id} post={post} />
+      ))}
+    </div>
+  );
+}
+
+export default Feed;
