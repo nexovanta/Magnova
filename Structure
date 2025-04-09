@@ -1,0 +1,15 @@
+/src
+  /components
+    Header.js
+    Sidebar.js
+    Feed.js
+    Profile.js
+    Stories.js
+    Message.js
+  /assets
+    /images
+      logo.png
+  App.js
+  index.js
+  /styles
+    App.css
