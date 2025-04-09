@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magnova</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Magnova</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#explore">Explore</a>
+      <a href="#profile">Profile</a>
+      <a href="#messages">Messages</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section id="home">
+      <h2>Home Feed</h2>
+      <p>Your latest posts appear here...</p>
+    </section>
+    <section id="explore">
+      <h2>Discover New Content</h2>
+      <p>Trending topics and posts...</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Magnova</p>
+  </footer>
+</body>
+</html>
