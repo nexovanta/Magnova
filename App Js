@@ -1,0 +1,23 @@
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Feed from './components/Feed';
+import Stories from './components/Stories';
+import './styles/App.css';
+
+function App() {
+  return (
+    <div className="app">
+      <Header />
+      <div className="app__content">
+        <Sidebar />
+        <div className="app__main">
+          <Stories />
+          <Feed />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
