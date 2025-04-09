@@ -1,0 +1,19 @@
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__content {
+  display: flex;
+}
+
+.app__main {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
