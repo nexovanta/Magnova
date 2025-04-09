@@ -1,0 +1,48 @@
+// PHASE 2: FEED + POSTS (EXTENDED) // ======================= // Tech Stack: React (frontend), Node.js + Express (backend), MongoDB (database), Cloudinary (file uploads)
+
+// === FRONTEND ===
+
+// File: src/pages/HomeFeed.js // - Displays a list of posts from followed users
+
+// File: src/pages/CreatePost.js // - Upload image or video with caption
+
+// File: src/pages/SavedPosts.js // - Shows posts the user has bookmarked
+
+// File: src/components/PostCard.js // - Reusable card for displaying each post // - Includes like, comment, save, and share actions
+
+// File: src/components/CommentSection.js // - Displays and adds comments
+
+// File: src/components/LikeButton.js // - Handles like/unlike toggle and count
+
+// File: src/components/SaveButton.js // - Handles saving/bookmarking posts
+
+// File: src/api/posts.js // - Handles API calls for creating and fetching posts
+
+// File: src/api/comments.js // - API calls for adding/deleting comments
+
+// File: src/api/likes.js // - API calls for liking/unliking posts
+
+// === BACKEND ===
+
+// File: routes/posts.js // - POST /api/posts — Create a new post // - GET /api/posts/feed/:userId — Get feed for a user (based on follows) // - GET /api/posts/saved/:userId — Get saved posts
+
+// File: routes/comments.js // - POST /api/comments/:postId — Add comment // - DELETE /api/comments/:commentId — Delete comment
+
+// File: routes/likes.js // - POST /api/likes/:postId — Like/unlike post
+
+// File: models/Post.js // - Schema for image/video posts
+
+// File: models/Comment.js // - Schema for comments (postId, userId, text, timestamp)
+
+// File: models/Like.js // - Schema for likes (postId, userId)
+
+// === CLOUDINARY === // Already configured in Phase 1 (utils/cloudinary.js)
+
+// === FILE STRUCTURE ===
+
+// ├── client/ // │   ├── src/ // │   │   ├── pages/ // │   │   │   ├── HomeFeed.js // │   │   │   ├── CreatePost.js // │   │   │   └── SavedPosts.js // │   │   ├── components/ // │   │   │   ├── PostCard.js // │   │   │   ├── CommentSection.js // │   │   │   ├── LikeButton.js // │   │   │   └── SaveButton.js // │   │   ├── api/ // │   │   │   ├── posts.js // │   │   │   ├── comments.js // │   │   │   └── likes.js
+
+// ├── server/ // │   ├── routes/ // │   │   ├── posts.js // │   │   ├── comments.js // │   │   └── likes.js // │   ├── models/ // │   │   ├── Post.js // │   │   ├── Comment.js // │   │   └── Like.js
+
+// === NEXT === // I’ll now write full code for each file above in the next steps. // Let me know if you want a ZIP or want me to generate file-by-file.
+
