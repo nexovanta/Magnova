@@ -1,0 +1,4 @@
+mkdir my-social-media-app
+cd my-social-media-app
+npm init -y
+npm install express mongoose cors body-parser jsonwebtoken bcryptjs
